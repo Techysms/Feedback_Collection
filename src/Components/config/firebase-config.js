@@ -16,7 +16,9 @@ const app = initializeApp(firebaseConfig);
 export const auth=getAuth(app);
 export const googleProvider= new GoogleAuthProvider();
 export const emailJsConfig = {
-  userId: 'JhNy4JhUODFDG-cFu',
+  serviceId: 'service_ze02s2b',
+  templateId: 'template_4od35ut',
+  userEmail: 'harisundar03@gmail.com',
 };
 export const db = getFirestore(app);
 export const storage = getStorage(app);

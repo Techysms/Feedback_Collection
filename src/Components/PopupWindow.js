@@ -54,27 +54,31 @@ function PopupWindow(props) {
       pdf.addImage(imgData, "PNG", 2, 5, pdfWidth, pdfHeight);
      
       pdf.save("download.pdf");
-      const pdfBlob = pdf.output('blob');
-
-      // Create a new FormData object and append the PDF blob to it
-      const formData = new FormData();
-      formData.append('pdf', pdfBlob, 'download.pdf');
-      formData.append('receiverEmail', email);
-      // Add your EmailJS service details
-      const serviceId = 'service_ze02s2b';
-      const templateId = 'template_4od35ut';
-      const userId = 'JhNy4JhUODFDG-cFu';
-  
-      // Send the email using EmailJS
-      emailjs.sendForm(serviceId, templateId, formData, emailJsConfig.userId)
-        .then(() => {
-          console.log('Email sent successfully!');
-        })
-        .catch((error) => {
-          console.error('Error sending email:', error);
-        });
+      sendEmail(email, pdf.output('blob'));
     });
   };
+  const sendEmail = (recipientEmail, pdfBlob) => {
+    const emailParams = {
+      to_email: recipientEmail,
+      from_email: emailJsConfig.userEmail,
+      subject: "PDF Report",
+      message: "Please find the attached PDF report.",
+    };
+
+    const emailAttachment = {
+      name: 'report.pdf',
+      data: pdfBlob,
+    };
+
+    emailjs.send(emailJsConfig.serviceId, emailJsConfig.templateId, emailParams, [emailAttachment])
+      .then((result) => {
+        console.log("Email sent successfully");
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+      });
+  };
+
 
   return (
     <div className="popup-container">
@@ -86,10 +90,11 @@ function PopupWindow(props) {
       <h2 id='d'>{averageRating} out of 5</h2>
       <h3 id='t'>Total Response : {totalresponse}</h3>
       <Bar value={averageRating}/>
-      <h2>{(averageRating/5)*100}%</h2>
+      <h2>{Math.floor((averageRating/5)*100)}%</h2>
       <button id='azz' onClick={handleDownload}>Download as PDF</button>
-      <input type="email" placeholder="Enter receiver's email" value={email} onChange={handleEmailChange} />
+      {/* <input type="email" placeholder="Enter receiver's email" value={email} onChange={handleEmailChange} /> */}
       {/* <input type="email" placeholder="Enter your email" value={email} onChange={handleEmailChange} /> */}
+      {/* <input type="email" placeholder="Enter receiver's email" value={email} onChange={handleEmailChange} /> */}
       </>
     ) : (
       <p>No such document found.</p>
