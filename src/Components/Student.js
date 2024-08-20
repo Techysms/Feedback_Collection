@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import Sem from "./Sem";
+import "./Student.css"
 import { useState } from "react";
 import { auth } from "./config/firebase-config";
 import { signOut } from "firebase/auth";
@@ -58,20 +59,24 @@ const Student=(props)=>{
     getYearList();
   }, []); 
 
-        return(
-            <div id='ip'>
-            <h1 id="navb">
-             Academic year <br></br><div id="y">{props.year}</div>
-             <select id='sel' value={selectedOption} onChange={handleOptionChange}>
-        <option value="">---select--- </option>
-        {yearList.map((movie) => (
-          <option value={movie.year}>{movie.year}</option>))}
-      </select>
-      <button id='lot'  onClick={logout}>Logout</button>
-            </h1>
-            <div><Sem /></div>
-            </div>
-            );
+  return (
+    <div id="parent-sem">
+      <div id='ip1'>
+        <div id="navb">
+            <br /><div id="y">{props.year}</div>
+            <select id='sel' value={selectedOption} onChange={handleOptionChange}>
+                <option value="" id="opt1">Academic Year</option>
+                {yearList.map((movie) => (
+                    <option key={movie.id} value={movie.year} id="opt1">{movie.year}</option>
+                ))}
+            </select>
+            <button id='lot' onClick={logout}>Logout</button>
+        </div>
+    </div>
+    <div id='sem-box'><Sem /></div>
+    </div>
+);
+
            
 }
 export default Student;

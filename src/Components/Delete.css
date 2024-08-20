@@ -1,0 +1,106 @@
+
+#ob-del{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#aq-del{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: var(--color3);
+    text-shadow: 2px solid #6b82c8;
+}
+
+#xz-del{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    width: 40%;
+    margin: 30px 0px;
+    border-radius: 10px;
+    box-shadow: -4px -4px 7px #ffffff,
+              8px 8px 8px #ceced1;
+}
+
+#sel-del{
+    border: none;
+    outline: none;
+    width: 100%;
+    box-shadow: -4px -4px 7px #ffffff,
+               6px 6px 8px #ceced1;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0px 2px;
+    margin-bottom: 10px;
+    height: 40px;
+    padding: 0px 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+    width: 60%;
+    font-size: 20px;
+}
+
+#dcb{
+    margin-top: 30px;
+    margin-bottom: 2vh;
+    font-size:large;
+    background-color: #456ec7;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 130px;
+    height: 45px;
+    box-shadow: -4px -4px 7px #ffffff,
+              6px 6px 8px #ceced1;
+  }
+
+  #dcb:hover{
+    box-shadow: inset -4px -4px 7px #ffffff,
+              inset 6px 6px 8px #ceced1;
+    color: rgb(69, 110, 199);
+    background-color: #ecf0f3;
+  }
+
+  .notification {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    right: 20px;
+    border-top: 8px solid green; /* Adjust as needed */
+    background-color: #74ce89; /* Green color for success */
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 0px;
+    animation: slideInRight 0.5s ease-in-out; /* Animation for sliding in */
+  }
+
+  #noti{
+    background-color: #74ce89;
+    font-size: 18px;
+  }
+
+  .close-btn { /* Red color for close button */
+    color: #000;
+    border: none;
+    outline: none;
+    margin-left: 10px; /* Adjust as needed */
+    cursor: pointer;
+    background-color: #74ce89;
+  }
+  
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  

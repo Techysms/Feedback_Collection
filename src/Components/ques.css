@@ -1,4 +1,4 @@
-#qlist{
+/* #qlist{
     font-family:'Times New Roman', Times, serif;
     font-weight: bold;
     font-size: larger;
@@ -30,6 +30,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(./images/dv.jpg);
+    
 
-}
+} */
+
+/* background-image: url(./images/blur2.jpg); */

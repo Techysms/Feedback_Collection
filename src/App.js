@@ -7,7 +7,6 @@ import Student from './Components/Student'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './Components/Login';
 import { UserAdd } from './Components/UserAdd';
-import RatingForm from './Components/RatingForm';
 import StarRatingForm from './Components/StarRatingForm'
 import { TenQuestionRatingForm } from './Components/TenQuestionRatingForm';
 import { Semes } from './Components/Semes';
@@ -31,7 +30,6 @@ const App = () => {
   <Routes>
     <Route path="/" element={<MainPage/>}/>
     <Route path="/admin" element={<Admin/>}/>
-    <Route path='/rg' element={<RatingForm/>}/>
     <Route path="/academics" element={<Student/>} />
     <Route path="/adlogin" element={<Login name="ADMIN"/>} />
     <Route path="/stdlogin" element={<Login name="STUDENT"/>} />

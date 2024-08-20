@@ -1,0 +1,63 @@
+
+#fques{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+} 
+
+#qlist{
+    background-color: var(--color1);
+    color: var(--color2);
+    border: none;
+    outline: none;
+    font-size:large;
+    padding: 30px;
+    border-radius: 10px;
+    width: 800px;
+    text-align: left;
+    margin: 5vh;
+    box-shadow: inset -4px -4px 7px #ffffff,
+              inset 3px 3px 8px #ceced1;
+              
+}
+#qbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.star-rate{
+    scale: 2;
+    margin-left: 70px;
+    margin-bottom: 30px;
+    color: var(--color2);
+    background-color: var(--color2);
+}
+
+.star-rate:hover{
+    color: var(--color2);
+}
+
+#qq{
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-size:large;
+    background-color: #456ec7;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 130px;
+    height: 45px;
+    box-shadow: -4px -4px 7px #ffffff,
+              3px 3px 8px #ceced1;
+  }
+
+ #qq:hover{
+    box-shadow: inset -4px -4px 7px #ffffff,
+              inset 3px 3px 8px #ceced1;
+    color: rgb(69, 110, 199);
+    background-color: #ecf0f3;
+  }
+  

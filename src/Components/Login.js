@@ -1,15 +1,18 @@
 import React from "react";
-import './m.css';
+import './Login.css';
 import log from './images/log.png'
 import { useNavigate } from "react-router-dom";
-import {auth,googleProvider} from "./config/firebase-config";
+import { auth, googleProvider} from "./config/firebase-config";
 import { createUserWithEmailAndPassword,signInWithPopup } from "firebase/auth";
 import { useState } from "react";
 const Login=(props)=>{
 	// const[email,setEmail]=useState("");;
 	// const [password,setPassword]=useState("");
 	// const signIn=async()=>{
-    // await createUserWithEmailAndPassword(auth,email,password);
+	// try {
+	// 	await createUserWithEmailAndPassword(auth,email,password);
+	// }  catch(err) {
+	// console.errorerr);
 	// };
 	const isadmin = props.isadmin;
 	const signInWithGoogle=async()=>{
@@ -35,7 +38,7 @@ const Login=(props)=>{
 		// 	);
 		// setsuccessMessage('Successfully Validated');
 		// if(input.email !== 'admin@a.com' || input.password !== 'Password@1') return seterrorMessage('Invalid email or password');
-        if(input.email === 'admin@a.com' || input.password === 'Password@1')
+        if(input.email === 'faculty@2025' || input.password === 'cse@2025')
 		navigate('/admin');
 
 		else{
@@ -47,23 +50,27 @@ const Login=(props)=>{
 	};
 return(
 <div id="back">
-    <h1 id="head">HELLO {props.name}</h1>
+    {/* <h1 id="head">HELLO {props.name} !!</h1> */}
     <div id="box">
         <img id="lg" src={log} alt="s"></img>
-        <h3 id='ln'>Login Page</h3>
-    <input type="text" className="form-control" name="email" placeholder="Username" onChange={handleChange} required></input>
+        <h3 id='ln'>Faculty Login</h3>
+    <input type="text" name="email" placeholder="Username" onChange={handleChange} required id='fac-input'></input>
     <br></br>
 
-    <input type="password" name="password" onChange={handleChange} placeholder="Password" className="form-control" required></input>
+    <input type="password" name="password" onChange={handleChange} placeholder="Password" required id='fac-input'></input>
 
-	<input id="sub" type="submit" onClick={formSubmitter}></input>
+	<button id="sub" type="submit" onClick={formSubmitter}>Submit</button>
 
     
     {errorMessage.length > 0 && (<div className="msg">{errorMessage}</div>)}
     {successMessage.length > 0 && (	<div className="msg">{successMessage}</div>)}
 	{/* <button id="sub" onClick={signInWithGoogle}>google</button> */}
+	
     </div>
-    
+	{/* <div className="square one"></div>
+	<div className="square two"></div>
+	<div className="circle one"></div>
+	<div className="circle two"></div> */}
 </div>);
 }
 export default Login;

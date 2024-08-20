@@ -1,0 +1,75 @@
+#b1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color1);
+    height: 100vh;
+}
+
+.semes-inner h3{
+    margin-top: 60px;
+    color: var(--color2);
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 70px;
+}
+
+#bx1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#bzzz1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+    width: 80%;
+    padding: 20px; /* Add padding to increase space around the buttons */
+    margin-right: 10px; /* Add margin to the right of each button */
+    margin-bottom: 10px; /* Add margin to the bottom of each button */
+    font-size: 20px;
+    border-radius: 10px;
+    color: var(--color1);
+    background-color: var(--color2);
+    box-shadow: -4px -4px 7px #ffffff,
+                3px 3px 8px #ceced1;
+    border: none;
+    outline: none;
+    text-align: left; /* Center button content */
+  }
+
+
+  #bzzz1:hover{
+    color: var(--color2);
+    background-color: var(--color1);
+    box-shadow: inset -4px -4px 7px #ffffff,
+                inset 3px 3px 8px #ceced1;
+  }
+
+.semes-inner{
+    width: 80%;
+    margin: 50px auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: -4px -4px 7px #ffffff,
+              3px 3px 8px #ceced1;
+     
+              
+}
+
+.semes-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+    gap: 10px;
+    padding-bottom: 50px;
+    width: 100%;
+    padding: 0px 40px;
+    padding-bottom: 50px; /* Adjust the gap between buttons */
+  }
